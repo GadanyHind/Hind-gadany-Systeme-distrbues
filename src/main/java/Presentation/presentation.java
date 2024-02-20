@@ -11,7 +11,7 @@ public class presentation {
         */
         //DaoImpl dao= new DaoImpl();  couplage fort
         DaoImpl2 dao= new DaoImpl2();  //couplage fort
-        IMetierImpl metier=new IMetierImpl(); // couplage fort
+        IMetierImpl metier=new IMetierImpl(dao); // couplage fort
         metier.setDao(dao); // l'injection des dependences
         System.out.println("Resultat: "+metier.calcule());
     }
